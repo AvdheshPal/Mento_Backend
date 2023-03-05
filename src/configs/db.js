@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
+require('dotenv').config()
 
 const connect = () => {
+    console.log('Database Connected');
     return mongoose.connect(
-        "mongodb+srv://aadityaneve:aadityaneve12$@cluster0.aiizm.mongodb.net/mento-server"
+       process.env.DATABASE_URL + "mento-server"
     )
 }
 
