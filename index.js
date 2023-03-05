@@ -1,9 +1,9 @@
-const { start, app } = require('./server');
+const { start, app } = require('./src/server');
 const express = require('express');
 app.use(express.json());
 
-const topicsController = require('./controllers/topics.controller');
-const topicsDetailsController = require('./controllers/topicsDetails.controller');
+const topicsController = require('./src/controllers/topics.controller');
+const topicsDetailsController = require('./src/controllers/topicsDetails.controller');
 
 app.get('/', (req, res) => {
     try {
